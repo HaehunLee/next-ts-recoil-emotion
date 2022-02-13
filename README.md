@@ -152,3 +152,27 @@ const Component = () => {
   );
 };
 ```
+
+## alias
+
+- tsconfig.json 수정을 통해 alias 설정.
+- 아래와 같이 import를 해서 컴포넌트 구조 변경, 파일 위치 이동 등을 할때 용이해지고,
+- import가 깔끔해짐.
+
+```json
+// tsconfig.json
+{
+  "compilerOptions": {
+    ...
+    "baseUrl": "."
+  },
+  ...
+}
+```
+
+```jsx
+// import Layout from '../components/Layout';
+import Layout from 'components/Layout';
+
+const Component = () => <Layout>alias</Layout>;
+```

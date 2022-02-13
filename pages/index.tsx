@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
+import Layout from 'components/Layout';
 import Link from 'next/link';
 import { useRecoilState } from 'recoil';
-
-import Layout from '../components/Layout';
 
 import { TestState } from 'recoil/board/atoms';
 

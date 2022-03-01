@@ -6,13 +6,8 @@
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
-    "test": "lint-staged",
+    "pre:commit": "lint-staged",
     "type-check": "tsc"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [

@@ -1,11 +1,17 @@
 import type { AppProps } from 'next/app';
-import Head from 'next/head';
 import { RecoilRoot } from 'recoil';
+
+import { Div } from '#/components/atoms';
+import { Header } from '#/components/organisms';
+import '#/styles/globalStyles.css';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
-      <Component {...pageProps} />
+      <Header />
+      <Div paddingTop="60px">
+        <Component {...pageProps} />
+      </Div>
     </RecoilRoot>
   );
 }

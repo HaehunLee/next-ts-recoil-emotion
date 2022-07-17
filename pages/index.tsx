@@ -1,8 +1,8 @@
-import styled from '@emotion/styled';
-import Layout from 'components/Layout';
 import Link from 'next/link';
 import { useRecoilState } from 'recoil';
 
+import { Div } from '#/components/atoms';
+import Layout from 'components/Layout';
 import { TestState } from 'recoil/board/atoms';
 
 const IndexPage = () => {
@@ -10,7 +10,7 @@ const IndexPage = () => {
 
   return (
     <Layout title="Home | BoilterPlate - Next.js + TypeScript + Emotion + Recoil">
-      <EmotionDiv>
+      <Div backgroundColor="yellow">
         <h1>Hello Next.js 👋</h1>
         <p>
           <Link href="/about">
@@ -25,13 +25,9 @@ const IndexPage = () => {
           테스트 값 변경
         </button>
         <p>test: {test}</p>
-      </EmotionDiv>
+      </Div>
     </Layout>
   );
 };
 
 export default IndexPage;
-
-const EmotionDiv = styled.div`
-  background-color: yellow;
-`;
